@@ -38,7 +38,8 @@ def OR(x1, x2): # 或门
     else:
         return 1
 
-print(AND(0,0))
-print(AND(0,1))
-print(AND(1,0))
-print(AND(1,1))
+def XOR(x1, x2): # 异或门
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
+    return y
